@@ -5,7 +5,7 @@ function play(userChoice) {
   let computerChoice = choices[ranChoice];
 
   let rowElement = document.querySelector(".custom-bg-row");
-  // rowElement.classList.remove("win-bg", "lose-bg");
+  rowElement.classList.remove("win-bg", "lose-bg");
 
   if (userChoice === computerChoice) {
     document.getElementById("result").innerHTML = "It's a draw!";
