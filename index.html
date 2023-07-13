@@ -11,6 +11,7 @@
   </head>
   <body>
     <h1>Rock Paper Scissors Game</h1>
+    <button class="btn btn-primary" onclick="startGame()">Play Again</button>
     <div class="container">
       <div class="row">
         <div class="col-md-4">
@@ -19,7 +20,8 @@
             src="images/rock.png"
             alt="Rock"
             title="Rock"
-            onclick="play('rock')"
+            onclick="play('rock'); updateRoundCount()"
+            data-choice="rock"
           />
         </div>
         <div class="col-md-4">
@@ -28,7 +30,8 @@
             src="images/paper.png"
             alt="Paper"
             title="Paper"
-            onclick="play('paper')"
+            onclick="play('paper'); updateRoundCount()"
+            data-choice="paper"
           />
         </div>
         <div class="col-md-4">
@@ -37,13 +40,15 @@
             src="images/scissors.png"
             alt="Scissors"
             title="Scissor"
-            onclick="play('scissors')"
+            onclick="play('rocscissorsk'); updateRoundCount()"
+            data-choice="scissors"
           />
         </div>
       </div>
       <div class="row">
         <div class="col-md-12 mt-4">
           <h3 id="result" class="result-text"></h3>
+          <p>Round: <span id="roundCount">0</span></p>
         </div>
       </div>
     </div>
